@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, red, orange);
+    font-family: Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.crad h1{
+    display: flex;
+    /* justify-content: center; */
+    align-items: start;
+}
+
+.container{
+    width: 350px;
+    height: 500px;
+    /* border: 3px solid blue; */
+}
+
+.container:hover > .card{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.card{
+    height: 100%;
+    width: 100%;
+    /* border: 3px solid black; */
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back{
+
+    height: 100%;
+    width: 100%;
+    /* border: 3px solid white; */
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50 ,50 ,50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+
+}
+.front{
+    background: url(dog\ bg.png);
+}
+
+.back{
+
+    background-color: rgb(71, 71, 71);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
